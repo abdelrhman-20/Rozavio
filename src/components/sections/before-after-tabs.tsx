@@ -238,7 +238,7 @@ export function BeforeAfterTabs({
                   >
                     {heading}
                   </h3>
-                  <p className="mt-3 text-[16px] leading-[1.65] text-[rgb(var(--ba-fg)/0.78)] transition-colors duration-700 lg:text-[15px]">
+                  <p className="mt-3 text-[16px] leading-[1.65] text-[rgb(var(--ba-fg)/0.78)] transition-colors duration-700 lg:min-h-[calc(3*1.65*15px)] lg:text-[15px]">
                     {body}
                   </p>
                 </div>
