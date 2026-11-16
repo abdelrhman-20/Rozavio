@@ -138,7 +138,7 @@ export function BeforeAfterTabs({
       >
         <ol
           key={mode}
-          className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5"
+          className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4 xl:gap-5"
         >
           {items.map((item, index) => {
             const heading = isAfter ? item.afterHeading : item.beforeHeading;
@@ -238,7 +238,7 @@ export function BeforeAfterTabs({
                   >
                     {heading}
                   </h3>
-                  <p className="mt-3 text-[16px] leading-[1.65] text-[rgb(var(--ba-fg)/0.78)] transition-colors duration-700 lg:min-h-[calc(3*1.65*15px)] lg:text-[15px]">
+                  <p className="mt-3 text-[16px] leading-[1.65] text-[rgb(var(--ba-fg)/0.78)] transition-colors duration-700 xl:min-h-[calc(2*1.65*15px)] xl:text-[15px]">
                     {body}
                   </p>
                 </div>
