@@ -1,8 +1,9 @@
 import { type SiteData } from "./types";
+import { withBase } from "@/lib/base-path";
 
 export const site: SiteData = {
   name: "Rozavio",
-  logoSrc: "/images/logo-light.png",
+  logoSrc: withBase("/images/logo-light.png"),
   logoAlt: "Rozavio",
   nav: [
     { label: "منهجنا", href: "/#our-approach" },

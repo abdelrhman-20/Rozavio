@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/base-path";
 import { type ReactNode } from "react";
 
 /** Shared destination for the "ناقش مشروعك" CTAs: the booking section
@@ -55,7 +56,7 @@ export function SectionCta({
         : "text-[#14110d] decoration-[#14110d]/30 hover:decoration-[#14110d] focus-visible:ring-[#14110d]/40";
     return (
       <a
-        href={href}
+        href={withBase(href)}
         className={`group inline-flex min-h-[44px] items-center gap-2 text-base font-semibold underline underline-offset-[6px] transition focus-visible:rounded-sm focus-visible:ring-2 focus-visible:outline-none ${colour} ${className}`}
       >
         {children}
@@ -65,7 +66,7 @@ export function SectionCta({
   }
   return (
     <a
-      href={href}
+      href={withBase(href)}
       className={`group rz-cta-glow inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full bg-[var(--color-primary)] px-6 py-3 text-base font-semibold whitespace-nowrap text-[var(--color-primary-foreground)] transition hover:brightness-110 sm:w-auto ${className}`}
     >
       {children}

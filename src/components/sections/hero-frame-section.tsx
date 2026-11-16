@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/base-path";
 import { HeroFrame } from "@/components/sections/hero-frame";
 import { type HeroFrameData } from "@/content/types";
 
@@ -104,7 +105,7 @@ export function HeroFrameSection({ data }: HeroFrameSectionProps) {
               <div className="rz-hero-rise rz-hero-d4 mt-8 flex h-full flex-col gap-3 sm:flex-row">
                 {primaryCtaLabel ? (
                   <a
-                    href={primaryCtaHref ?? "#"}
+                    href={withBase(primaryCtaHref ?? "#")}
                     className="rz-cta-glow inline-flex w-full items-center justify-center rounded-full bg-[var(--color-primary)] px-6 py-3 text-base font-semibold whitespace-nowrap text-[var(--color-primary-foreground)] transition hover:brightness-110 sm:w-auto"
                   >
                     {primaryCtaLabel}
@@ -112,7 +113,7 @@ export function HeroFrameSection({ data }: HeroFrameSectionProps) {
                 ) : null}
                 {secondaryCtaLabel ? (
                   <a
-                    href={secondaryCtaHref ?? "#"}
+                    href={withBase(secondaryCtaHref ?? "#")}
                     className="inline-flex w-full items-center justify-center rounded-full border border-[#f4f0e6]/40 px-6 py-3 text-base font-semibold whitespace-nowrap text-[#f4f0e6] transition hover:border-[#f4f0e6] hover:bg-white/5 sm:w-auto"
                   >
                     {secondaryCtaLabel}

@@ -28,6 +28,7 @@ import {
   BrowserChrome,
   PracticeHero,
 } from "@/components/sections/what-we-build-practice-mockup";
+import { withBase } from "@/lib/base-path";
 
 const ORANGE = "#EA4E1A";
 const INK = "#14110d";
@@ -40,11 +41,11 @@ const serif = { fontFamily: "var(--font-sans)" };
  * broken image.
  */
 const PHOTO = {
-  hero: "/images/what-we-build/journey-hero.jpg",
-  sports: "/images/what-we-build/journey-sports.jpg",
-  back: "/images/what-we-build/journey-back.jpg",
-  rehab: "/images/what-we-build/journey-rehab.jpg",
-  ndis: "/images/what-we-build/journey-ndis.jpg",
+  hero: withBase("/images/what-we-build/journey-hero.jpg"),
+  sports: withBase("/images/what-we-build/journey-sports.jpg"),
+  back: withBase("/images/what-we-build/journey-back.jpg"),
+  rehab: withBase("/images/what-we-build/journey-rehab.jpg"),
+  ndis: withBase("/images/what-we-build/journey-ndis.jpg"),
 };
 
 // ─── Left column: feature rows ───

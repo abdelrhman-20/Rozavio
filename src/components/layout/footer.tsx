@@ -1,5 +1,6 @@
 import { BackToTop } from "@/components/layout/back-to-top";
 import { type SiteData } from "@/content/types";
+import { withBase } from "@/lib/base-path";
 
 const ROZAVIO_ORANGE = "#EA4E1A";
 
@@ -67,7 +68,7 @@ export function Footer({ site }: FooterProps) {
           </ul>
 
           <a
-            href={site.cta.href}
+            href={withBase(site.cta.href)}
             className="rz-cta-glow mt-8 inline-flex w-full items-center justify-center rounded-full bg-[var(--color-primary)] px-6 py-3 text-base font-semibold whitespace-nowrap text-[var(--color-primary-foreground)] transition hover:brightness-110 sm:w-auto"
           >
             {footer.ctaLabel}

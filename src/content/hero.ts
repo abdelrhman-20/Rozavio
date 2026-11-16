@@ -1,4 +1,5 @@
 import { type HeroFrameData } from "./types";
+import { withBase } from "@/lib/base-path";
 
 export const hero: HeroFrameData = {
   badgeText: "شريكك الرقمي لأي نشاط تجاري",
@@ -12,22 +13,22 @@ export const hero: HeroFrameData = {
   frameEyebrow: "من أعمالنا",
   frameImages: [
     {
-      src: "/images/works/wida-full.jpg",
-      thumb: "/images/works/wida-thumb.jpg",
+      src: withBase("/images/works/wida-full.jpg"),
+      thumb: withBase("/images/works/wida-thumb.jpg"),
       alt: "الصفحة الكاملة لموقع wida.sa",
       label: "wida.sa",
       url: "https://wida.sa/",
     },
     {
-      src: "/images/works/brwaz1-full.jpg",
-      thumb: "/images/works/brwaz1-thumb.jpg",
+      src: withBase("/images/works/brwaz1-full.jpg"),
+      thumb: withBase("/images/works/brwaz1-thumb.jpg"),
       alt: "الصفحة الكاملة لموقع brwaz1.sa",
       label: "brwaz1.sa",
       url: "https://brwaz1.sa/",
     },
     {
-      src: "/images/works/melton-full.jpg",
-      thumb: "/images/works/melton-thumb.jpg",
+      src: withBase("/images/works/melton-full.jpg"),
+      thumb: withBase("/images/works/melton-thumb.jpg"),
       alt: "الصفحة الكاملة لموقع meltonphysio.com.au",
       label: "meltonphysio.com.au",
       url: "https://meltonphysio.com.au/",

@@ -55,10 +55,24 @@ const securityHeaders = [
     : []),
 ];
 
-const nextConfig: NextConfig = {
-  async headers() {
-    return [{ source: "/:path*", headers: securityHeaders }];
-  },
-};
+/**
+ * GitHub Pages build (`DEPLOY_TARGET=github-pages`): a static export served
+ * under `/Rozavio`. Pages cannot send custom response headers, so the
+ * security headers above only apply on hosts that run Next.js itself.
+ */
+const isPages = process.env.DEPLOY_TARGET === "github-pages";
+
+const nextConfig: NextConfig = isPages
+  ? {
+      output: "export",
+      basePath: process.env.NEXT_PUBLIC_BASE_PATH,
+      images: { unoptimized: true },
+      trailingSlash: true,
+    }
+  : {
+      async headers() {
+        return [{ source: "/:path*", headers: securityHeaders }];
+      },
+    };
 
 export default nextConfig;

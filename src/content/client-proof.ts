@@ -1,4 +1,5 @@
 import { type ClientProofData } from "./types";
+import { withBase } from "@/lib/base-path";
 
 export const clientProof: ClientProofData = {
   eyebrow: "أعمالنا",
@@ -14,8 +15,8 @@ export const clientProof: ClientProofData = {
       category: "حلول اتصالية · السعودية",
       url: "https://wida.sa/",
       host: "wida.sa",
-      imageSrc: "/images/works/wida-full.jpg",
-      thumb: "/images/works/wida-thumb.jpg",
+      imageSrc: withBase("/images/works/wida-full.jpg"),
+      thumb: withBase("/images/works/wida-thumb.jpg"),
       imageAlt: "الصفحة الرئيسية لموقع wida.sa",
       linkLabel: "زيارة موقع wida",
       brandColor: "#6E4FDB",
@@ -27,8 +28,8 @@ export const clientProof: ClientProofData = {
       category: "تطوير عقاري · السعودية",
       url: "https://brwaz1.sa/",
       host: "brwaz1.sa",
-      imageSrc: "/images/works/brwaz1-full.jpg",
-      thumb: "/images/works/brwaz1-thumb.jpg",
+      imageSrc: withBase("/images/works/brwaz1-full.jpg"),
+      thumb: withBase("/images/works/brwaz1-thumb.jpg"),
       imageAlt: "الصفحة الرئيسية لموقع brwaz1.sa",
       linkLabel: "زيارة موقع برواز",
       brandColor: "#C09B66",
@@ -40,8 +41,8 @@ export const clientProof: ClientProofData = {
       category: "علاج طبيعي · أستراليا",
       url: "https://meltonphysio.com.au/",
       host: "meltonphysio.com.au",
-      imageSrc: "/images/works/melton-full.jpg",
-      thumb: "/images/works/melton-thumb.jpg",
+      imageSrc: withBase("/images/works/melton-full.jpg"),
+      thumb: withBase("/images/works/melton-thumb.jpg"),
       imageAlt: "الصفحة الرئيسية لموقع meltonphysio.com.au",
       linkLabel: "زيارة موقع Melton Physio",
       brandColor: "#00A8E8",

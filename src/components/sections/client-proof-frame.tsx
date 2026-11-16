@@ -8,6 +8,7 @@ import { bookingHref } from "@/components/sections/section-cta";
 import { SiteDialog } from "@/components/sections/site-dialog";
 import { type ClientProofData } from "@/content/types";
 import { cn } from "@/lib/utils/cn";
+import { withBase } from "@/lib/base-path";
 
 type Work = ClientProofData["works"][number];
 
@@ -197,7 +198,7 @@ export function ClientProofShowcase({ data }: ClientProofShowcaseProps) {
           <div className="mt-8 flex flex-col items-stretch gap-5 sm:flex-row sm:items-center sm:gap-7">
             {data.primaryCtaLabel ? (
               <a
-                href={bookingHref(data.primaryCtaHref)}
+                href={withBase(bookingHref(data.primaryCtaHref))}
                 className="rz-cta-glow inline-flex w-full items-center justify-center rounded-full bg-[var(--color-primary)] px-6 py-3 text-base font-semibold whitespace-nowrap text-[var(--color-primary-foreground)] transition hover:brightness-110 sm:w-auto"
               >
                 {data.primaryCtaLabel}

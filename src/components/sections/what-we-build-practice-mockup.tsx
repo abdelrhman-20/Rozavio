@@ -8,6 +8,7 @@ import arrowRight from "@iconify-icons/lucide/arrow-right";
 import calendarCheck from "@iconify-icons/lucide/calendar-check";
 import check from "@iconify-icons/lucide/check";
 import clock from "@iconify-icons/lucide/clock";
+import { withBase } from "@/lib/base-path";
 
 const ORANGE = "#EA4E1A";
 const INK = "#14110d";
@@ -15,7 +16,7 @@ const INK = "#14110d";
 
 // Placeholder headshots (men only) for the practitioner avatars.
 const PHYSIO_PHOTOS = [1, 2, 3, 4].map(
-  (n) => `/images/what-we-build/physio-${n}.jpg`,
+  (n) => withBase(`/images/what-we-build/physio-${n}.jpg`),
 );
 
 // Items marked `wide` only appear once the frame has room for them.
