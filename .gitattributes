@@ -1,0 +1,6 @@
+# Drizzle migration files must always use LF line endings.
+# The migration hash is computed from file content; CRLF vs LF
+# produces different hashes, which breaks `db:migrate` on Windows
+# when git's core.autocrlf converts LF to CRLF on checkout.
+drizzle/**/*.sql eol=lf
+drizzle/meta/** eol=lf
